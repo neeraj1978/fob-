@@ -1,0 +1,82 @@
+:root {
+  --primary-pink: #e91e63;
+  --primary-blue: #2196f3;
+  --gradient: linear-gradient(135deg, #e91e63, #2196f3);
+  --gradient-hover: linear-gradient(135deg, #d81b60, #1976d2);
+  --text-dark: #333;
+  --text-light: #666;
+  --background-light: #f8f9ff;
+  --white-transparent: rgba(255, 255, 255, 0.9);
+  --pink-transparent: rgba(233, 30, 99, 0.1);
+  --blue-transparent: rgba(33, 150, 243, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: var(--background-light);
+}
+
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-bg {
+  background: var(--gradient);
+}
+
+.gradient-border {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box, var(--gradient) border-box;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-gradient {
+  background: var(--gradient);
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-gradient:hover {
+  background: var(--gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+  color: white;
+}
+
+.btn-outline-gradient {
+  background: transparent;
+  border: 2px solid var(--primary-pink);
+  color: var(--primary-pink);
+  padding: 8px 23px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-outline-gradient:hover {
+  background: var(--gradient);
+  border-color: transparent;
+  color: white;
+}
